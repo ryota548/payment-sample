@@ -2,7 +2,6 @@ package db
 
 import (
 	"database/sql"
-	"os"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -12,9 +11,9 @@ var Conn *sql.DB
 
 // NewSQLHandler - init sql handler
 func init() {
-	user := os.Getenv("root")
-	pass := os.Getenv("password")
-	name := os.Getenv("itemsDB")
+	user := "root"
+	pass := "password"
+	name := "itemsDB"
 
 	dbconf := user + ":" + pass + "@/" + name
 	conn, err := sql.Open("mysql", dbconf)
