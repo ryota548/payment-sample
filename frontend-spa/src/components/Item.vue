@@ -29,9 +29,9 @@ export default {
     }
   },
   created () {
+    console.log(this)
     // urlで指定された動的パラメーターから商品情報をとってくる。
     axios.get(`http://localhost:8888/api/v1/items/${this.$route.params.id}`).then(res => {
-      console.log(res)
       this.item = res.data
     })
   },
