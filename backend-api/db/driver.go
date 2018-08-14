@@ -13,7 +13,7 @@ var Conn *sql.DB
 // NewSQLHandler - init sql handler
 func init() {
 	user := os.Getenv("root")
-	pass := os.Getenv("root")
+	pass := os.Getenv("password")
 	name := os.Getenv("itemsDB")
 
 	dbconf := user + ":" + pass + "@/" + name

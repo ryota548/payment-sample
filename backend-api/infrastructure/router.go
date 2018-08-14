@@ -2,6 +2,7 @@ package infrastructure
 
 import (
 	"os"
+	"payment-sample/backend-api/handler"
 
 	"github.com/gin-contrib/cors"
 	gin "github.com/gin-gonic/gin"

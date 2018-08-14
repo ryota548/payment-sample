@@ -22,7 +22,7 @@ type server struct{}
 func (s *server) Charge(ctx context.Context, req *gpay.PayRequest) (*gpay.PayResponse, error) {
 
 	//PAIの初期化
-	pay := payjp.New(os.Getenv("sk_test_2edddef9d0406bb17b6e5542"), nil)
+	pay := payjp.New(os.Getenv("PAYJP_TEST_SECRET_KEY"), nil)
 
 	// 支払いをします。第一引数に支払い金額、第二引数に支払いの方法や設定を入れます。
 	charge, err := pay.Charge.Create(int(req.Amount), payjp.Charge{
